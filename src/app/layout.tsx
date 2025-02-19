@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Container, Box } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,8 +17,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <head>
+        <title>TechneApp official website</title>
+      </head>
+      <body
+        style={{ margin: 0, padding: 0, width: "100vw", overflowX: "hidden" }}
+      >
+        <Header />
+        <Box
+          component="main"
+          sx={{ minHeight: "80vh", width: "100%", padding: 0, margin: 0 }}
+        >
+          {children}
+        </Box>
+        <Footer />
       </body>
     </html>
   );
