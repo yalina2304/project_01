@@ -12,157 +12,206 @@ const services = [
   {
     title: "IT Consultancy",
     description:
-      "IT consulting services are advisory services that help you assess different technology strategies and, in doing so, align your technology strategies with your business or process strategies.",
+      "IT consulting services help you align your technology strategies with your business goals.",
   },
   {
     title: "UI/UX Design",
     description:
-      "UI / UX design is about collecting your requirements and evaluates it , Than proceed the idea using storyboards , prototypes",
+      "UI/UX design involves wireframes, prototypes, and improving user experience.",
   },
   {
     title: "Web Development",
     description:
-      "Web development is process of building websites which means creating and maintaining websites. It includes web design, web publishing, web",
+      "Creating and maintaining websites, including frontend and backend development.",
   },
   {
     title: "Software Development",
-    description:
-      "Software development is a process of creating, designing, deploying and supporting software which will",
+    description: "Designing, deploying, and supporting software applications.",
   },
   {
     title: "Mobile Application",
-    description:
-      "A mobile application, most commonly referred to as an app, is a type of application software designed to run on a mobile devic",
+    description: "Developing applications for iOS and Android devices.",
   },
   {
     title: "Enterprise System",
     description:
-      "Enterprise systems is a large complex computing systems which handle large volumes of data and",
+      "Handling large-scale data and business processes with enterprise solutions.",
   },
   {
     title: "DevOps Development",
     description:
-      "DevOps is the set of practices that works to automate and integrate the processes between software development and IT teams, so they",
+      "Automating and integrating processes between software development and IT teams.",
   },
   {
     title: "Blockchain",
     description:
-      "A blockchain is a digital, public ledger that records online transactions which is a core technology for cryptocurrencies like",
+      "Distributed ledger technology used for cryptocurrencies and secure transactions.",
   },
   {
     title: "Testing & QA",
     description:
-      "QA and Testing in Software Testing is defined as a procedure to ensure the quality of software products or services provided to the",
+      "Ensuring software quality through rigorous testing methodologies.",
   },
 ];
 
 const Services = () => {
   return (
-    <Container maxWidth="lg" sx={{ p: { xs: 2, md: 4 } }}>
-      <Box
+    <Box>
+      <Typography
+        variant="h4"
+        fontWeight="bold"
         sx={{
           textAlign: "center",
           mb: 4,
+          fontFamily: "Poppins, sans-serif",
+          color: "#010501",
+          mt: "2rem",
         }}
       >
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          sx={{ mb: 2, color: "#010501", fontsize: { xs: "2rem", md: "3rem" } }}
-        >
-          What{" "}
-          <Box component="span" sx={{ color: "#2D0630" }}>
-            We
-          </Box>{" "}
-          Do
-        </Typography>
-
+        What{" "}
         <Box
+          component="span"
           sx={{
-            display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            borderRadius: "30px",
-            width: "100%",
-            gap: { xs: 4, md: 0 },
-            p: { xs: 4, md: 0 },
-            boxShadow: 4,
+            fontFamily: "Poppins, sans-serif",
+            color: "#702562",
+            display: "inline",
           }}
         >
-          <Box
+          We
+        </Box>{" "}
+        Do
+      </Typography>
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          backgroundColor: "#0D020A",
+          borderRadius: "40px",
+          paddingX: { xs: 1, md: 4 },
+          paddingY: 2,
+          boxShadow: 4,
+          width: "100%",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+          textAlign: "left",
+        }}
+      >
+        <Box
+          sx={{
+            width: { xs: "100%", md: "40%" },
+            display: "flex",
+            alignItems: "flex-start",
+            flexDirection: "column",
+            padding: "20px",
+            height: "100%",
+            minHeight: { xs: "150px", md: "300px" },
+          }}
+        >
+          <Typography
+            variant="h4"
+            fontWeight="bold"
             sx={{
-              backgroundColor: "#06120C",
-              display: "flex",
-              flex: { xs: "1rem", md: "0.5rem " },
-              width: { xs: "100%", md: "40%" },
-              borderRadius: "20px ",
-              textAlign: "justify",
-              alignItems: "center",
-              p: 4,
+              color: "white",
+              fontFamily: "Poppins, sans-serif",
+              textAlign: "center",
+              mb: 2,
             }}
           >
-            <Typography variant="h6" fontWeight="bold" sx={{ mb: 5 }}>
-              Services
-            </Typography>
-            <Box
-              component="img"
-              src="/images/service.jpeg"
-              alt="service"
-              sx={{
-              width:"100%",
-                maxHeight: { xs: "200px", md: "300px" },
-                objectFit: "contain",
-                borderRadius: "10px",
-                mx: "auto",
-              }}
-            />
-          </Box>
-          {/*right*/}
-          <Box
+            Services
+          </Typography>
+
+          <Typography
+            variant="h5"
+            fontWeight="Regular"
             sx={{
-              backgroundColor: "#06120C",
-              display: "flex",
-              flex: { xs: "1", md: "0.5" },
-              flexDirection: "column",
-              gap: 2,
-              p: { xs: 2, md: 3 },
-              width: { xs: "100%", md: "60%" },
-              borderRadius: "20px",
+              color: "#21E8D6",
+              fontFamily: "Poppins, sans-serif",
+              textAlign: "left",
+              mb: 5,
             }}
           >
-            <List>
-              {services.map((service, index) => (
-                <Tooltip
-                  key={index}
-                  title={
-                    <Typography sx={{ fontSize: "1 rem", p: 1 }}>
-                      {service.description}
-                    </Typography>
-                  }
-                  arrow
-                  placement="bottom"
-                  sx={{ zIndex: 100 }}
-                >
-                  <ListItem
+            Our services are tailored to make your business grow and stand out.{" "}
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{
+              color: "white",
+              fontFamily: "Poppins, sans-serif",
+              textAlign: "left",
+            }}
+          >
+            {"  "}
+            Techneapp is an established, high-level and leading technology
+            provider of next-generation and end-to-end innovative custom
+            software solutions. Using inventive technology and untainted web
+            services. Techneapp prides itself on leading the market by using the
+            latest emerging technologies to fully automate business processes.
+          </Typography>
+        </Box>
+
+        {/*list*/}
+        <Box
+          sx={{
+            width: { xs: "100%", md: "80%" },
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
+            fontFamily: "Poppins, sans-serif",
+            padding: { xs: "0px", md: "2px" },
+          }}
+        >
+          <List
+            sx={{
+              width: "100%",
+              maxWidth: "500px",
+              fontFamily: "Poppins, sans-serif",
+            }}
+          >
+            {services.map((service, index) => (
+              <Tooltip
+                key={index}
+                title={
+                  <Typography
                     sx={{
-                      border: "2px solid rgb(87, 3, 62)",
-                      borderRadius: "10px",
-                      mb: 1,
-                      backgroundColor: "#702562",
-                      "&:hover": {
-                        backgroundColor: "#360527",
-                        cursor: "pointer",
-                      },
+                      fontSize: "1rem",
+                      p: 1,
+                      fontFamily: "Poppins, sans-serif",
                     }}
                   >
-                    <ListItemText primary={service.title} />
-                  </ListItem>
-                </Tooltip>
-              ))}
-            </List>
-          </Box>
+                    {service.description}
+                  </Typography>
+                }
+                arrow
+                placement="bottom"
+                componentsProps={{
+                  tooltip: { sx: { zIndex: 100 } },
+                }}
+              >
+                <ListItem
+                  sx={{
+                    fontFamily: "P oppins, sans-serif",
+                    border: "2px solid rgb(87, 3, 62)",
+
+                    borderRadius: "10px",
+                    mb: 1,
+                    backgroundColor: "#702562",
+                    color: "white",
+
+                    "&:hover": {
+                      backgroundColor: "#360527",
+                      cursor: "pointer",
+                    },
+                  }}
+                >
+                  <ListItemText primary={service.title} />
+                </ListItem>
+              </Tooltip>
+            ))}
+          </List>
         </Box>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

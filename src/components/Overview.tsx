@@ -13,6 +13,8 @@ const Overview = () => {
   return (
     <Box
       sx={{
+        mb: 4,
+        mt: "2rem",
         backgroundColor: "#94D1CC",
         padding: "4rem 1rem",
         display: "flex",
@@ -21,6 +23,7 @@ const Overview = () => {
         flexWrap: "wrap",
         gap: "60px",
         overflow: "hidden",
+        fontFamily: "Poppins, sans-serif",
       }}
     >
       {overview.map((item, index) => (
@@ -35,45 +38,47 @@ const Overview = () => {
           style={{
             position: "relative",
             textAlign: "center",
-            width: "180px",
-            height: "180px",
+            width: "300px",
+            height: "300px",
+            overflow: "hidden",
           }}
         >
           <Image
             src={item.img}
             alt={item.title}
-            width={180}
-            height={180}
-            style={{ display: "block", borderRadius: "50%" }}
+            layout="fill"
+            objectFit="contain"
           />
 
           <Typography
             variant="subtitle1"
             sx={{
               position: "absolute",
-              top: "35%", // Adjusted to center properly
-              left: "50%",
-              transform: "translate(-50%, -50%)",
+              top: "30%",
+              left: "10%",
+              fontFamily: "Poppins, sans-serif",
               color: "#fff",
               fontWeight: "bold",
-              fontSize: "14px",
+              fontSize: { xs: "20px", md: "23px" },
               textAlign: "center",
+              ZIndex: 2,
             }}
           >
             {item.title}
           </Typography>
 
-          {/* Value */}
+          {/* value */}
           <Typography
             variant="h5"
             sx={{
               position: "absolute",
-              bottom: "10%",
-              left: "50%",
-              transform: "translate(-50%, 0)",
+              bottom: "15%",
+              left: "70%",
+              fontFamily: "Poppins, sans-serif",
+
               color: "#fff",
               fontWeight: "bold",
-              fontSize: "22px",
+              fontSize: "25px",
             }}
           >
             {item.value}

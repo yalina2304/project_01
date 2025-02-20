@@ -4,29 +4,36 @@ import { Box, Typography, Card, Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
+import Image from "next/image";
 
 const team = [
-  { name: "CEO", image: "/images/Team/CEO.webp", color: "blue" },
-  { name: "Project Manager", image: "/images/Team/PM.jpg", color: "green" },
+  { name: "CEO", image: "/images/Team/CEO.webp", color: "#00023D" },
+  { name: "Project Manager", image: "/images/Team/PM.jpg", color: "#00023D" },
   {
     name: "Senior Software Engineer",
     image: "/images/Team/SW.jpeg",
-    color: "purple",
+    color: "#00023D",
+  },
+  {
+    name: "Senior Software Engineer",
+    image: "/images/Team/SW.jpeg",
+    color: "#00023D",
   },
 ];
 const Team = () => {
   return (
-    <Container maxWidth="lg" sx={{p:{xs:3,md:4}}}>
+    <Box>
       <Box
         sx={{
           textAlign: "center",
-          marginBottom: "1rem",
+          mb: 4,
+          mt: "2rem",
         }}
       >
         <Typography
           variant="h4"
           fontWeight="bold"
-          sx={{ mb: 2, color: "#010501" }}
+          sx={{ mb: 2, color: "#010501", fontFamily: "Poppins,sans-serif" }}
         >
           Meet{" "}
           <Box component="span" sx={{ color: "#2D0630" }}>
@@ -37,68 +44,79 @@ const Team = () => {
 
         <Box
           sx={{
-            backgroundColor: "#1CF7E4",
-            padding: "2rem",
-            maxWidth: "1000px",
-            margin: "auto",
+            backgroundColor: "#1F1330",
+            padding: { xs: "0rem", md: "2rem" },
+            width: "100%",
+            maxWidth: "1200px",
+            margin: " 0 auto",
             borderRadius: "20px ",
             textAlign: "center",
+            marginTop: "15px",
+            marginBottom: "15px",
           }}
         >
           <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
+            spaceBetween={20}
             navigation={true}
             modules={[Navigation]}
             breakpoints={{
-              640: { slidesPerView: 1 },
+              0: { slidesPerView: 1.2 },
               1200: { slidesPerView: 3 },
             }}
-            style={{ width: "90%", maxWidth: "800px", marginTop: "20px" }}
+            style={{
+              marginTop: "20px",
+              marginBottom: "20px",
+            }}
           >
             {team.map((member, index) => (
               <SwiperSlide key={index}>
-                <Card
+                <Box
                   sx={{
                     borderRadius: "20px",
                     textAlign: "center",
                     p: 2,
                     display: "flex",
                     height: "350px",
-                    Width: "100px",
-
+                    Width: "100%",
+                    position: "relative",
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
                     backgroundColor: member.color,
                   }}
                 >
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
+                    width={90}
+                    height={120}
+                    //fill
                     style={{
-                      width: "90px",
-                      height: "120px",
                       borderRadius: "50%",
                       objectFit: "cover",
                       display: "block",
-                      marginTop: "5px",
+                      marginTop: "15px",
                       marginBottom: "15px",
                     }}
                   />
                   <Typography
                     fontWeight="bold"
-                    sx={{ fontSize: "18px", color: "white", mt: 1 }}
+                    sx={{
+                      fontSize: "18px",
+                      color: "white",
+                      mt: 1,
+                      fontFamily: "Poppins, sans-serif",
+                    }}
                   >
                     {member.name}
                   </Typography>
-                </Card>
+                </Box>
               </SwiperSlide>
             ))}
           </Swiper>
         </Box>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

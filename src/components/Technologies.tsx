@@ -4,89 +4,127 @@ import { Box, Typography, Stack, Container } from "@mui/material";
 import Image from "next/image";
 
 export default () => (
-  <Container maxWidth="lg" sx={{ p: { xs: 2, md: 4 } }}>
-    <Box sx={{ textAlign: "center", my: 5, color: "#010501" }}>
-      <Typography variant="h4" fontWeight="bold">
+  <Box>
+    <Box
+      sx={{
+        textAlign: "center",
+        my: 5,
+        color: "#010501",
+        fontFamily: "Poppins, sans-serif",
+        mb: 4,
+        mt: "2rem",
+      }}
+    >
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        sx={{ mb: 2, color: "#010501", fontFamily: "Poppins,sans-serif" }}
+      >
         Technologies{" "}
         <Typography
           variant="h4"
           component="span"
           color="#2D0630"
           fontWeight="bold"
+          sx={{ fontFamily: "Poppins,sans-serif" }}
         >
           We{" "}
         </Typography>
-        <Typography variant="h4" component="span" fontWeight="bold">
+        <Typography
+          variant="h4"
+          component="span"
+          fontWeight="bold"
+          sx={{ fontFamily: "Poppins,sans-serif" }}
+        >
           Used{" "}
         </Typography>
       </Typography>
-      <Stack spacing={2} mt={2} alignItems="center">
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "16px",
+          mt: "2rem",
+        }}
+      >
         {/* Frontend */}
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            backgroundColor: "#09030A",
+            backgroundColor: "#0F0F0F",
             borderRadius: "10px",
-            padding: "10px 20px",
-            width: "80%",
+            padding: "5px 20px",
+            width: "100%",
+            minHeight: "80px",
             maxWidth: "1100px",
-            height: "80px",
+
             flexDirection: { xs: "column", md: "row" },
           }}
         >
-          <Typography variant="body1" fontWeight="bold" color="white">
+          <Typography
+            variant="body1"
+            fontWeight="bold"
+            color="white"
+            mb={0}
+            sx={{ fontFamily: "Poppins,sans-serif" }}
+          >
             Frontend
           </Typography>
-          <Stack
-            direction="row"
-            spacing={1}
+          <Box
             sx={{
-              flexWrap: "Wrap",
+              img: { borderRadius: "10px" },
+              display: "flex",
+              gap: "10px",
+              flexWrap: "wrap",
               justifyContent: "center",
-              width: { xs: "50%", md: "80%" },
+              width: "100%",
+              // width: { xs: "50%", md: "80%" },
+              alignItems: "center",
+              mt: { xs: 0, md: 1 },
+              p: "5px",
             }}
-            mt={{ xs: 2, md: 0 }}
           >
             <Image
               src="/images/technologies/js.png"
               alt="JavaScript"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
             <Image
               src="/images/technologies/angular.png"
               alt="Angular"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
             <Image
               src="/images/technologies/tailwind.png"
               alt="Tailwind"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
-            <Image src="/images/react" alt="React" width={30} height={30} />
+
             <Image
               src="/images/technologies/vuejs.png"
               alt="Vue.js"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
             <Image
               src="/images/technologies/NextJs.png"
               alt="Next.js"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
             <Image
               src="/images/technologies/mui.png"
               alt="Material UI"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
-          </Stack>
+          </Box>
         </Box>
 
         {/* Backend */}
@@ -95,41 +133,53 @@ export default () => (
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            backgroundColor: "#09030A",
+            backgroundColor: "#0F0F0F",
             borderRadius: "10px",
-            padding: "10px 20px",
-            width: "80%",
+            padding: "5px 20px",
+            width: "100%",
+
+            minHeight: "80px",
             maxWidth: "1100px",
-            height: "80px",
+
             flexDirection: { xs: "column", md: "row" },
           }}
         >
-          <Typography variant="body1" fontWeight="bold" color="white">
+          <Typography
+            variant="body1"
+            fontWeight="bold"
+            color="white"
+            mb={0}
+            sx={{ fontFamily: "Poppins,sans-serif" }}
+          >
             Backend
           </Typography>
-          <Stack
-            direction="row"
-            mt={{ xs: 2, md: 0 }}
-            justifyContent="center"
+          <Box
             sx={{
-              flexWrap: "Wrap",
+              img: { borderRadius: "10px" },
+              display: "flex",
+              gap: "10px",
+              flexWrap: "wrap",
               justifyContent: "center",
-              width: { xs: "50%", md: "80%" },
+              width: "100%",
+              // width: { xs: "50%", md: "80%" },
+              alignItems: "center",
+              mt: { xs: 0, md: 1 },
+              p: "5px",
             }}
           >
             <Image
               src="/images/technologies/JavaI.png"
               alt="Java"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
             <Image
               src="/images/technologies/python.png"
               alt="Phython"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
-          </Stack>
+          </Box>
         </Box>
 
         {/* Database */}
@@ -138,49 +188,60 @@ export default () => (
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            backgroundColor: "#09030A",
+            backgroundColor: "#0F0F0F",
             borderRadius: "10px",
-            padding: "10px 20px",
-            width: "80%",
+            padding: "5px 20px",
+            width: "100%",
+            minHeight: "80px",
             maxWidth: "1100px",
-            height: "80px",
+
             flexDirection: { xs: "column", md: "row" },
           }}
         >
-          <Typography variant="body1" fontWeight="bold" color="white">
+          <Typography
+            variant="body1"
+            fontWeight="bold"
+            color="white"
+            mb={0}
+            sx={{ fontFamily: "Poppins,sans-serif" }}
+          >
             Database
           </Typography>
-          <Stack
-            direction="row"
-            mt={{ xs: 2, md: 0 }}
-            justifyContent="center"
+          <Box
             sx={{
-              flexWrap: "Wrap",
+              img: { borderRadius: "10px" },
+              display: "flex",
+              gap: "10px",
+              flexWrap: "wrap",
               justifyContent: "center",
-              width: { xs: "50%", md: "80%" },
+              width: "100%",
+              // width: { xs: "50%", md: "80%" },
+              alignItems: "center",
+              mt: { xs: 0, md: 1 },
+              p: "5px",
             }}
           >
             <Image
               src="/images/technologies/mongodb.png"
               alt="MongoDB"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
             <Image
               src="/images/technologies/mySql.png"
               alt="MySQL"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
             <Image
               src="/images/technologies/redis.png"
               alt="Redis"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
             />
-          </Stack>
+          </Box>
         </Box>
-      </Stack>
+      </Box>
     </Box>
-  </Container>
+  </Box>
 );

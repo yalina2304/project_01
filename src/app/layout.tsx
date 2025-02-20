@@ -3,7 +3,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Container, Box } from "@mui/material";
+import { Poppins } from "next/font/google";
+import { Box } from "@mui/material";
+
+const poppins = Poppins({
+  weight: ["400", "600", "900"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.className}>
       <head>
         <title>TechneApp official website</title>
       </head>

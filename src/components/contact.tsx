@@ -7,7 +7,14 @@ import Image from "next/image";
 const contact = () => {
   return (
     <Box sx={{ textAlign: "center", py: 2, px: 2, mt: 2, mb: 2 }}>
-      <Typography variant="h4" sx={{ fontWeight: "bold", color: "#000" }}>
+      <Typography
+        variant="h4"
+        sx={{
+          fontFamily: "Poppins,sans-serif",
+          fontWeight: "bold",
+          color: "#000",
+        }}
+      >
         Let's <span style={{ color: "#0D1D14" }}>Talk</span>
       </Typography>
 
@@ -17,7 +24,7 @@ const contact = () => {
 
       <Typography
         variant="body1"
-        sx={{ fontWeight: "bold", color: "#10A175", mt: 2 }}
+        sx={{ color: "#10A175", mt: 2, fontFamily: "Poppins,sans-serif" }}
       >
         Let's talk about your product,
       </Typography>
@@ -35,7 +42,11 @@ const contact = () => {
       >
         <Typography
           variant="body2"
-          sx={{ color: "#000112", justifyContent: "center" }}
+          sx={{
+            fontFamily: "Poppins,sans-serif",
+            color: "#000112",
+            justifyContent: "center",
+          }}
         >
           We love engaging with new clients and our community. If you have any
           enquiries about building digital products or any other questions, get
@@ -57,7 +68,8 @@ const contact = () => {
         <Button
           variant="contained"
           sx={{
-            backgroundColor: "#14C38E",
+            fontFamily: "Poppins,sans-serif",
+            backgroundColor: "#000369",
             color: "#fff",
             borderRadius: 20,
             px: 3,
@@ -72,6 +84,7 @@ const contact = () => {
           variant="contained"
           sx={{
             backgroundColor: "#14C38E",
+            fontFamily: "Poppins,sans-serif",
             color: "#fff",
             borderRadius: 20,
 

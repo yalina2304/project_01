@@ -28,18 +28,19 @@ const stories = [
 
 const Stories = () => {
   return (
-    <Container maxWidth="lg"  sx={{ p: { xs: 2, md: 4 } }}>
+    <Box>
       <Box
         sx={{
           textAlign: "center",
-          mb: 5,
+          mb: 4,
+          mt: "2rem",
           fontSize: { xs: "0.5rem", md: "1 rem" },
         }}
       >
         <Typography
           variant="h4"
           fontWeight="bold"
-          sx={{ mb: 2, color: "#010501" }}
+          sx={{ mb: 2, color: "#010501", fontFamily: "Poppins, sans-serif" }}
         >
           What{" "}
           <Box component="span" sx={{ color: "#2D0630" }}>
@@ -50,8 +51,9 @@ const Stories = () => {
 
         <Card
           sx={{
-            backgroundColor: "#06120C",
+            backgroundColor: "#E293F2",
             padding: { xs: "1rem", md: "2rem" },
+            fontFamily: "Poppins, sans-serif",
             maxWidth: "1300px",
             margin: "auto",
             borderRadius: "20px",
@@ -83,7 +85,14 @@ const Stories = () => {
               <Box sx={{ flex: 1, ml: { xs: 0, md: 3 }, mt: { x: 2, md: 0 } }}>
                 <Typography
                   variant="body1"
-                  sx={{ fontsize: { xs: "1rem", md: "1.5rem" } }}
+                  color="#070108"
+                  sx={{
+                    fontsize: {
+                      xs: "0.5rem",
+                      md: "1.5rem",
+                      fontFamily: "Poppins, sans-serif",
+                    },
+                  }}
                 >
                   {story.text}
                 </Typography>
@@ -101,13 +110,16 @@ const Stories = () => {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: "#31C24E",
+                backgroundColor: "#300733",
                 color: "#fff",
                 fontWeight: "bold",
                 mt: 3,
+                paddingX: 3,
+                paddingY: 1,
+                fontFamily: "Poppins, sans-serif",
                 borderRadius: "10px",
                 textTransform: "none",
-                padding: { xs: "1rem", md: "1.5rem" },
+
                 "&:hover": { backgroundColor: "#1BD4D0" },
               }}
             >
@@ -116,7 +128,7 @@ const Stories = () => {
           </Box>
         </Card>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

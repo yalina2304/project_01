@@ -31,33 +31,53 @@ const Header = () => {
 
   return (
     <AppBar
-      position="fixed"
-      sx={{ backgroundColor: "#02000D", padding: "5px 0", zIndex: 1100 }}
+      sx={{
+        backgroundColor: "#02000D",
+        // paddingleft: { xs: "16px", md: "32px" },
+        // paddingRight: "0px",
+        py: 0,
+        zIndex: 1100,
+        position: "fixed",
+      }}
     >
-      <Container maxWidth="lg">
+      <Container>
         <Toolbar
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: { xs: "end", md: "space-between" },
             alignItems: "center",
+            width: "100%",
+            paddingLeft: { xs: "16px", md: "32px" },
+            paddingRight: { xs: "0px", md: "32px" },
+            py: 1,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <Image
               src="/images/techneapp-logo.svg"
               alt="Company Logo"
-              width={120}
-              height={50}
-              priority
+              width={200}
+              height={200}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+              // sizes="(max-width: 900px) 120px, 200px"
             />
           </Box>
 
-          <Box sx={{ display: { xs: "none", md: "flex" }, gap: "20px" }}>
+          <Box
+            sx={{
+              alignItems: "center",
+              display: { xs: "none", md: "flex" },
+              gap: "30px",
+            }}
+          >
             {navList.map((item, index) => (
               <Typography
                 key={index}
                 sx={{
-                  fontFamily: "'Poppins', sans-serif",
+                  fontFamily: "Poppins', sans-serif",
                   fontSize: "16px",
                   fontWeight: "500",
                   cursor: "pointer",
@@ -84,10 +104,12 @@ const Header = () => {
               Contact Us
             </Button>
           </Box>
+          {/* mobie view */}
           <IconButton
-            edge="start"
+            size="medium"
+            edge="end"
             color="inherit"
-            sx={{ display: { md: "none" } }}
+            sx={{ display: { md: "none" }, padding: "0px" }}
             onClick={navMenu}
           >
             <MenuOutlinedIcon />
@@ -98,13 +120,22 @@ const Header = () => {
         anchor="right"
         open={click}
         onClose={navMenu}
-        sx={{ width: "250px", flexShrink: 0 }}
+        sx={{
+          "& .MuiDrawer-paper": {
+            backgroundColor: "#BABABA",
+            width: 250,
+            height: 350,
+          },
+        }}
       >
         <Box
           sx={{
-            backgroundColor: "#02000D",
-            height: "50vh",
-            overflowY: "auto",
+            backgroundColor: "#BABABA",
+            height: 350,
+            width: 250,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
           }}
         >
           <List>
@@ -114,14 +145,16 @@ const Header = () => {
                   primary={item}
                   sx={{
                     textAlign: "center",
-                    color: "white",
-                    "&:hover": { color: "#04041C" },
+
+                    fontFamily: "Poppins', sans-serif",
+                    color: "#F2F2F2",
+                    "&:hover": { color: "#000000" },
                   }}
                 />
               </ListItem>
             ))}
           </List>
-          <Box sx={{ display: { xs: "block", md: "none" }, padding: "20px" }}>
+          <Box sx={{ textAlign: "center", padding: "20px" }}>
             <Button
               variant="outlined"
               sx={{

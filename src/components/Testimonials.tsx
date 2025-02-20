@@ -2,52 +2,45 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
+
 import "swiper/css/navigation";
 import { Box, Card, Typography, Container } from "@mui/material";
-import Image from "next/image";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 
 const testimonials = [
   {
     name: "Jane Nic",
     job: "Project Manager",
     des: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-    image: "/images/testimonials/test1.png",
   },
   {
     name: "Jhon Doe",
     job: "Project Manager",
     des: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-    image: "/images/testimonials/test2.png",
   },
   {
     name: "Ali Pazani",
     job: "Project Manager",
     des: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-    image: "/images/testimonials/test1.png",
   },
 ];
 
 const Testimonial = () => {
   return (
-    <Container maxWidth="lg" sx={{ p: { xs: 3, md: 4 } }}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          pt: 5,
-          pb: 5,
-        }}
-      >
+    <Box>
+      <Box sx={{ textAlign: "center", pt: 5, pb: 5, mb: 4, mt: "2rem" }}>
         <Typography
           variant="h4"
           fontWeight="bold"
-          sx={{ mb: 2, color: "#010501" }}
+          sx={{ color: "#010501", fontFamily: "Poppins, sans-serif" }}
         >
           What{" "}
-          <Box component="span" sx={{ color: "#2D0630" }}>
+          <Box
+            component="span"
+            sx={{ color: "#2D0630", fontFamily: "Poppins, sans-serif" }}
+          >
             Our
           </Box>{" "}
           Client Saying
@@ -55,38 +48,40 @@ const Testimonial = () => {
 
         <Box
           sx={{
-            display: "flex",
-            backgroundColor: "#06120C",
+            mt: "2rem",
+            backgroundColor: "#3A0603",
             borderRadius: "30px",
             width: "100%",
             boxShadow: 2,
-            py: 4,
-            px: { xs: 2, md: 5 },
+            py: { xs: 1, md: 5 },
+            px: { xs: 1, md: 5 },
+            display: "flex",
+            justifyContent: "center",
+            position: "relative",
           }}
         >
           <Box
             sx={{
-              maxWidth: 1000,
-              mx: "auto",
-              px: 2,
+              maxWidth: "1200px",
+              width: "100%",
             }}
           >
             <Swiper
               modules={[Navigation]}
               navigation={true}
-              spaceBetween={2}
-              slidesPerView={1}
+              spaceBetween={20}
+              style={{ width: "100%" }}
               breakpoints={{
-                0: { slidesPerView: 2 },
+                0: { slidesPerView: 1.2 },
                 1200: { slidesPerView: 3 },
               }}
-              style={{ paddingBottom: 15 }}
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
                   <Card
                     sx={{
-                      backgroundColor: "transparent",
+                      backgroundColor: "#590905",
+
                       color: "#fff",
                       borderRadius: 3,
                       position: "relative",
@@ -95,45 +90,68 @@ const Testimonial = () => {
                       alignItems: "center",
                       textAlign: "center",
                       maxWidth: 300,
-                      mx: "auto",
                       height: 350,
+                      mx: "auto",
+                      p: 3,
+                      top: "20%",
                     }}
                   >
-                    <Image
-                      src={testimonial.image}
-                      alt={"bg"}
-                      width={320}
-                      height={350}
-                      style={{ borderRadius: 10 }}
-                    />
+                    <Typography
+                      variant="body1"
+                      sx={{ color: "white", fontFamily: "Poppins, sans-serif" }}
+                    >
+                      {testimonial.des}
+                    </Typography>
 
                     <Box
                       sx={{
-                        position: "absolute",
-                        top: "20%",
-                        left: "10%",
-                        width: "80%",
-                        color: "#fff",
+                        width: "100%",
+                        textAlign: "center",
+                        mt: 2,
                       }}
                     >
-                      <Typography variant="body1" gutterBottom>
-                        {testimonial.des}
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          color: "#FFDBBE",
+                          position: "absolute",
+                          bottom: "30%",
+
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        {testimonial.name}
+                      </Typography>
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          color: "#F7F7F7",
+                          position: "absolute",
+                          bottom: "20%",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        {testimonial.job}
                       </Typography>
                     </Box>
 
+                    {/* Star */}
                     <Box
                       sx={{
                         position: "absolute",
-                        bottom: "20%",
-                        left: "10%",
-                        width: "80%",
-                        color: "#FF16DF",
+                        bottom: "5%",
+                        display: "flex",
+                        gap: 0.5,
                       }}
                     >
-                      <Typography variant="h6">{testimonial.name}</Typography>
-                      <Typography variant="subtitle1" sx={{ color: "#11F9FF" }}>
-                        {testimonial.job}
-                      </Typography>
+                      {[...Array(5)].map((_, i) => (
+                        <Typography
+                          key={i}
+                          sx={{ color: "#FFD700", fontSize: "1.5rem" }}
+                        >
+                          <StarBorderIcon />
+                        </Typography>
+                      ))}
                     </Box>
                   </Card>
                 </SwiperSlide>
@@ -142,7 +160,7 @@ const Testimonial = () => {
           </Box>
         </Box>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

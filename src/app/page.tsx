@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Layout from "./layout";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import HeroSection from "../components/HeroSection";
 import Services from "../components/Services";
 import Stories from "../components/Stories";
@@ -17,11 +17,17 @@ export default function Home() {
       <HeroSection />
       <Container>
         <Services />
+
         <Stories />
+
         <Technologies />
+
         <Team />
-        <Overview />
+      </Container>
+      <Overview />
+      <Container>
         <Testimonials />
+
         <Contact />
       </Container>
     </main>

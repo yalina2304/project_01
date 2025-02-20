@@ -12,7 +12,14 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#10201B", color: "White", padding: "40px 0" }}>
+    <Box
+      sx={{
+        backgroundColor: "#10201B",
+        color: "White",
+        padding: "40px 0",
+        fontFamily: "Poppins,sans-serif",
+      }}
+    >
       <Container maxWidth="xl">
         <Stack
           direction={{ xs: "column", md: "row" }}
@@ -21,27 +28,62 @@ const Footer = () => {
           sx={{ px: { xs: 2, md: 4 } }}
         >
           <Box sx={{ flex: 1, marginLeft: "80px" }}>
-            <Typography variant="h6" fontWeight="regular" gutterBottom>
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              gutterBottom
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
               Company{" "}
             </Typography>
-            <Typography variant="body1">Headquarters</Typography>
-            <Typography variant="body2">
+            <Typography
+              variant="body1"
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
+              Headquarters
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
               163 Elerdine Road,Hounslow,England
             </Typography>
-            <Typography variant="body2">TW32PU,GB</Typography>
+            <Typography
+              variant="body2"
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
+              TW32PU,GB
+            </Typography>
 
-            <Typography variant="body1">R&D International</Typography>
-            <Typography variant="body2">
+            <Typography
+              variant="body1"
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
+              R&D International
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
               353/1 R DeMol Mawatha,colombo 3,
             </Typography>
             <Typography variant="body2">Western Province 00300,LK</Typography>
           </Box>
 
           <Box sx={{ flex: 1 }}>
-            <Typography variant="h6" fontWeight="bold" gutterBottom>
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              gutterBottom
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
               Services
             </Typography>
-            <Typography component="ul" variant="body2" sx={{ paddingLeft: 2 }}>
+            <Typography
+              component="ul"
+              variant="body2"
+              sx={{ paddingLeft: 2, fontFamily: "Poppins,sans-serif" }}
+            >
               <li>UI/UX Design</li>
               <li>Web Development</li>
               <li>DevOps Development</li>
@@ -51,16 +93,27 @@ const Footer = () => {
             </Typography>
           </Box>
           <Box sx={{ flex: 1 }}>
-            <Typography component="ul" variant="body2" sx={{ paddingLeft: 2 }}>
+            <Typography
+              component="ul"
+              variant="body2"
+              sx={{ paddingLeft: 2, fontFamily: "Poppins,sans-serif" }}
+            >
               <li>Career Overview</li>
               <li>Current Openings</li>
             </Typography>
           </Box>
           <Box>
-            <Typography variant="h5" fontWeight="bold">
+            <Typography
+              variant="h5"
+              fontWeight="bold"
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
               Newsletter Subscribe
             </Typography>
-            <Typography variant="body2">
+            <Typography
+              variant="body2"
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
               Subscribe with Techneapp To join thousand of other
               <br />
               professionals.nKeep Up-o date with the innovation
@@ -80,6 +133,7 @@ const Footer = () => {
                 placeholder="Mail"
                 size="small"
                 sx={{
+                  fontFamily: "Poppins,sans-serif",
                   flex: 1,
                   backgroundColor: "white",
                   "& .MuiOutlinedInput-root": {
@@ -90,6 +144,7 @@ const Footer = () => {
               <Button
                 variant="contained"
                 sx={{
+                  fontFamily: "Poppins,sans-serif",
                   borderRadius: "0 25px 25px 0",
                   backgroundColor: "#0E0A00",
                   color: "white",
@@ -117,7 +172,15 @@ const Footer = () => {
           alignItems="center"
           sx={{ px: { xs: 2, md: 4 } }}
         >
-          <Box sx={{ display: "flex", justifyContent: "left", gap: 2, my: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "left",
+              gap: 2,
+              my: 2,
+              img: { borderRadius: "5px" },
+            }}
+          >
             <Image
               src="/images/SocialMedia/fb.png"
               alt="Facebook"
@@ -161,6 +224,7 @@ const Footer = () => {
               flexDirection: { xs: "column", md: "row" },
               justifyContent: "right",
               gap: 1,
+              img: { borderRadius: "5px" },
             }}
           >
             <Image
@@ -169,7 +233,11 @@ const Footer = () => {
               width={24}
               height={24}
             />
-            <Typography variant="body2" justifyContent={"right"}>
+            <Typography
+              variant="body2"
+              justifyContent={"right"}
+              sx={{ fontFamily: "Poppins,sans-serif" }}
+            >
               2025 Techeapp.All Rights Reserved
             </Typography>
           </Box>
