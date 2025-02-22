@@ -47,8 +47,7 @@ const Header = () => {
             justifyContent: { xs: "end", md: "space-between" },
             alignItems: "center",
             width: "100%",
-            paddingLeft: { xs: "16px", md: "32px" },
-            paddingRight: { xs: "0px", md: "32px" },
+            padding: { xs: "0px 0px 0px 16px", md: "16px 32px" },
             py: 1,
           }}
         >
@@ -93,7 +92,7 @@ const Header = () => {
             <Button
               variant="outlined"
               sx={{
-                fontFamily: "'Poppins', sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 fontWeight: "600",
                 fontSize: "14px",
                 color: "white",
@@ -125,6 +124,7 @@ const Header = () => {
             backgroundColor: "#BABABA",
             width: 250,
             height: 350,
+            fontFamily: "'Poppins', sans-serif !important",
           },
         }}
       >
@@ -133,6 +133,7 @@ const Header = () => {
             backgroundColor: "#BABABA",
             height: 350,
             width: 250,
+
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
@@ -140,15 +141,24 @@ const Header = () => {
         >
           <List>
             {navList.map((item, index) => (
-              <ListItem key={index} onClick={navMenu}>
+              <ListItem
+                key={index}
+                onClick={navMenu}
+                sx={{
+                  cursor: "pointer",
+                  textAlign: "center",
+                  transition: "background-color 0.3s, color 0.3s",
+                  "&:hover": { color: "#06064A" },
+                }}
+              >
                 <ListItemText
                   primary={item}
-                  sx={{
+                  primaryTypographyProps={{
+                    fontFamily: "Poppins, sans-serif",
+                    fontWeight: "bold",
+                    fontSize: "16px",
+                    color: "#2E2E2E",
                     textAlign: "center",
-
-                    fontFamily: "Poppins', sans-serif",
-                    color: "#F2F2F2",
-                    "&:hover": { color: "#000000" },
                   }}
                 />
               </ListItem>
@@ -158,7 +168,7 @@ const Header = () => {
             <Button
               variant="outlined"
               sx={{
-                fontFamily: "'Poppins', sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 fontWeight: "600",
                 fontSize: "14px",
                 color: "white",

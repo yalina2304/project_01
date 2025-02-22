@@ -157,7 +157,7 @@ const Services = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-end",
-            fontFamily: "Poppins, sans-serif",
+            fontFamily: "Poppins, sans-serif !important",
             padding: { xs: "0px", md: "2px" },
           }}
         >
@@ -165,7 +165,7 @@ const Services = () => {
             sx={{
               width: "100%",
               maxWidth: "500px",
-              fontFamily: "Poppins, sans-serif",
+              fontFamily: "Poppins, sans-serif !important",
             }}
           >
             {services.map((service, index) => (
@@ -204,7 +204,13 @@ const Services = () => {
                     },
                   }}
                 >
-                  <ListItemText primary={service.title} />
+                  <ListItemText
+                    primary={service.title}
+                    primaryTypographyProps={{
+                      fontFamily: "Poppins, sans-serif",
+                      fontSize: "1rem",
+                    }}
+                  />
                 </ListItem>
               </Tooltip>
             ))}

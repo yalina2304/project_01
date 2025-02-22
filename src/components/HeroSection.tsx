@@ -7,7 +7,7 @@ const HeroSection = () => {
       sx={{
         position: "relative",
         width: "100vw",
-        height: { xs: "70vh", md: "120vh" },
+        height: { xs: "80vh", md: "120vh" },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -17,7 +17,7 @@ const HeroSection = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        paddingTop: { xs: "60px", md: "80px" },
+        paddingTop: { xs: "80px", md: "80px" },
         paddingBottom: { xs: "60px", md: "80px" },
         margin: 0,
       }}
@@ -25,13 +25,13 @@ const HeroSection = () => {
       <Container
         sx={{
           paddingX: { xs: 4, md: 8 },
-          paddingY: { xs: 4, md: 8 },
+          paddingY: { xs: 7, md: 8 },
         }}
       >
         <Container
           sx={{
             paddingX: { xs: 4, md: 8 },
-            paddingY: { xs: 4, md: 8 },
+            paddingY: { xs: 7, md: 8 },
             position: "relative",
             zIndex: 1,
           }}
@@ -43,7 +43,7 @@ const HeroSection = () => {
               color: "#091030",
               fontFamily: "Poppins, sans-serif",
               textTransform: "uppercase",
-              fontSize: { xs: "2rem", md: "5rem" },
+              fontSize: { xs: "1.5rem", md: "5rem" },
             }}
           >
             BUILDING{" "}
@@ -52,13 +52,13 @@ const HeroSection = () => {
               sx={{
                 fontWeight: "bold",
                 fontFamily: "Poppins, sans-serif",
-                paddingX: 1,
-                paddingY: 2,
+                paddingX: { xs: 0, md: 1 },
+                paddingY: { xs: 0, md: 1 },
                 backgroundImage: "url('/images/text.jpg')",
                 color: "white",
                 borderRadius: "5px",
                 display: "inline-block",
-                fontSize: { xs: "2rem", md: "5rem" },
+                fontSize: { xs: "1.5rem", md: "5rem" },
               }}
             >
               FUTURE-READY
@@ -73,7 +73,7 @@ const HeroSection = () => {
               textTransform: "uppercase",
               marginTop: 1,
               fontFamily: "Poppins, sans-serif",
-              fontSize: { xs: "2rem", md: "5rem" },
+              fontSize: { xs: "1.5rem", md: "5rem" },
             }}
           >
             BUSINESS APPLICATIONS

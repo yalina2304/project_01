@@ -56,10 +56,10 @@ export default () => (
             justifyContent: "space-between",
             backgroundColor: "#0F0F0F",
             borderRadius: "10px",
-            padding: "5px 20px",
+            padding: "10px 20px",
             width: "100%",
             minHeight: "80px",
-            maxWidth: "1100px",
+            maxWidth: "1300px",
 
             flexDirection: { xs: "column", md: "row" },
           }}
@@ -135,11 +135,11 @@ export default () => (
             justifyContent: "space-between",
             backgroundColor: "#0F0F0F",
             borderRadius: "10px",
-            padding: "5px 20px",
+            padding: "10px 20px",
             width: "100%",
 
             minHeight: "80px",
-            maxWidth: "1100px",
+            maxWidth: "1300px",
 
             flexDirection: { xs: "column", md: "row" },
           }}
@@ -190,10 +190,10 @@ export default () => (
             justifyContent: "space-between",
             backgroundColor: "#0F0F0F",
             borderRadius: "10px",
-            padding: "5px 20px",
+            padding: "10px 20px",
             width: "100%",
             minHeight: "80px",
-            maxWidth: "1100px",
+            maxWidth: "1300px",
 
             flexDirection: { xs: "column", md: "row" },
           }}
